@@ -6,4 +6,5 @@ var array: [Int] = []
 ages.append(34)
 print(ages)
 
-var agesset = Set(ages)
+var agesSet = Set(ages)
+agesSet.contains(42)
