@@ -5,3 +5,5 @@ var array: [Int] = []
 
 ages.append(34)
 print(ages)
+
+var agesset = Set(ages)
