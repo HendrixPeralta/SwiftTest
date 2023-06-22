@@ -26,8 +26,8 @@ devices["laptop"]
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // Functions
 
-func printInstructorName(){
-    print("Sean Allen")
+func printInstructor(name: String){
+    print(name)
 }
 
-printInstructorName()
+printInstructor(name: "Hendrix Peralta")
