@@ -78,3 +78,9 @@ for i in 0..<25 { //this range does not include 25 to include 25 you can write 0
     print(i)
 }
 
+var randomInts: [Int] = []
+for _ in 0..<25 { // if you dont use i inside the scope is better to replace i with _
+    let randomNumber = Int.random(in: 0...100)
+    randomInts.append(randomNumber)
+}
+print(randomInts)
