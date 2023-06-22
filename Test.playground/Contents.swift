@@ -84,3 +84,44 @@ for _ in 0..<25 { // if you dont use i inside the scope is better to replace i w
     randomInts.append(randomNumber)
 }
 print(randomInts)
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// enum
+
+enum Days { // the cases can be all in just one line if you separete them by commas
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+    case Sunday
+}
+
+func getCurrentDay(on day : Days) {
+    if day == .Friday {
+        print("No se que dia es pero el cuerpo lo sabea")
+    }else if day == .Monday {
+        print("Un dia triste lo se")
+    }else if day == .Wednesday {
+        print("Cuando se acaba la semana?")
+    }else if day == .Saturday {
+        print("Hora de buscar a alguien")
+    }
+}
+getCurrentDay(on: .Saturday)
+
+enum DaysClean: String { // now the enum has a String value
+    case Monday = "Primer dia triste lo se"
+    case Tuesday = "Un dia triste lo se"
+    case Wednesday = "Cuando se acaba la semana?"
+    case Thursday = "Cuarto dia triste lo se"
+    case Friday = "No se que dia es pero el cuerpo lo sabe"
+    case Saturday = "Hora de buscar a alguien"
+    case Sunday = "Un dia antes de ser triste lo se"
+}
+
+func getCurrentDayClean(on day : DaysClean) {
+    print(day.rawValue)
+}
+getCurrentDayClean(on: .Friday)
