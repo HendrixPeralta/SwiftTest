@@ -31,3 +31,11 @@ func printInstructor(name: String){
 }
 
 printInstructor(name: "Hendrix Peralta")
+
+func addNumbers(firstNumber: Int, to secondNumber: Int) -> Int{ // the "to" makes the call site more readable // the "to" can actually be any word
+  let result = firstNumber + secondNumber
+    return result
+}
+
+addNumbers(firstNumber: 3, to: 5) // call site
+
