@@ -29,7 +29,6 @@ devices["laptop"]
 func printInstructor(name: String){
     print(name)
 }
-
 printInstructor(name: "Hendrix Peralta")
 
 // argument labels, and parameter labels
@@ -37,8 +36,29 @@ func addNumbers(firstNumber: Int, to secondNumber: Int) -> Int{ // the "to" is a
   let result = firstNumber + secondNumber
     return result
 }
-
 addNumbers(firstNumber: 3, to: 5) // call site
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-// Functions
+// if / else
+
+var isDarModeOn = true
+
+if isDarModeOn == true {
+    print("That's how it should be")
+} else {
+    print("You are a psyco")
+}
+
+var myHighScore = 444
+var yourHighScore = 444
+
+if myHighScore > yourHighScore {
+    print("I win")
+}else if myHighScore < yourHighScore{
+    print("You win")
+}else {
+    print("Draw")
+}
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// for loops
