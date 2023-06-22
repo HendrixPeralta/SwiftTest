@@ -5,7 +5,7 @@ var ages = [21, 42, 54, 23, 75, 97]
 var array: [Int] = []
 
 ages.append(34)
-print(ages)
+//print(ages)
 
 var agesSet = Set(ages)
 agesSet.contains(42)
@@ -27,7 +27,7 @@ devices["laptop"]
 // Functions
 
 func printInstructor(name: String){
-    print(name)
+    //print(name)
 }
 printInstructor(name: "Hendrix Peralta")
 
@@ -44,21 +44,37 @@ addNumbers(firstNumber: 3, to: 5) // call site
 var isDarModeOn = true
 
 if isDarModeOn == true {
-    print("That's how it should be")
+    //print("That's how it should be")
 } else {
-    print("You are a psyco")
+   // print("You are a psyco")
 }
 
 var myHighScore = 444
 var yourHighScore = 444
 
 if myHighScore > yourHighScore {
-    print("I win")
+   // print("I win")
 }else if myHighScore < yourHighScore{
-    print("You win")
+   // print("You win")
 }else {
-    print("Draw")
+   // print("Draw")
 }
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // for loops
+
+let allStars = ["james", "Davis", "Harden", "Doncic", "Leonard"]
+
+for player in allStars {
+    print(player)
+}
+
+for player in allStars where player == "Harden"{ // you can add a condition to the for loop
+    print("your player is: ", player)
+}
+
+// for with ranges
+for i in 0..<25 { //this range does not include 25 to include 25 you can write 0...25
+    print(i)
+}
+
