@@ -10,6 +10,8 @@ print(ages)
 var agesSet = Set(ages)
 agesSet.contains(42)
 
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // Key - Values
 
 let devices: [String:String] = [
@@ -20,3 +22,12 @@ let devices: [String:String] = [
 ]
 
 devices["laptop"]
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Functions
+
+func printInstructorName(){
+    print("Sean Allen")
+}
+
+printInstructorName()
