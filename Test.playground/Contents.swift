@@ -177,3 +177,21 @@ func determinePlayerLeague(from rank: Int) {
     }
 }
 determinePlayerLeague(from: matchMakingRank)
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Operators
+
+let suma = 45 + 34
+let resta = 23-22
+let division = 33/12 // only gives back and int value unless both numbers are float type
+let divisionFloat = 33.0/12.0
+
+let number: Double = 33
+let number2: Double = 12
+let division3 = number/number2
+
+
+let multiplication = 33*12
+let modulo = 3%5
+
+
