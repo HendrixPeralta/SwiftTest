@@ -194,4 +194,16 @@ let division3 = number/number2
 let multiplication = 33*12
 let modulo = 3%5
 
+var counter = 0
+counter += 1
+counter -= 1
+let greeting = "Hello"
+let name = "Sean"
 
+print(greeting + " " + name)
+
+let agesYoung = [2, 6, 9]
+let agesOld = [35, 67, 87]
+
+let allAges = agesYoung + agesOld
+print(allAges)
