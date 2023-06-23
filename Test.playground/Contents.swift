@@ -279,3 +279,4 @@ hendrix.name = "Peralta" // you can change the values
 hendrix.name
 
 hendrix.tellStory()
+
