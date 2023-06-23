@@ -248,3 +248,34 @@ getOldestAge()
 // force unwrap
 
 let oldestAgeForce = ages2.last! // the exclamation point at the end forces the program to use the value. It does not matter if its nill (this can lead to crashes)
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Class
+
+class Developer {
+    var name: String?
+    var jobTitle: String?
+    var yearsExp: Int? // is you add the interrogation sign it becomes optional (accepts nill values) it didnt work
+    
+    init(name: String, jobTitle: String, yearsExp: Int) {
+        self.name = name
+        self.jobTitle = jobTitle
+        self.yearsExp = yearsExp
+    }
+    
+    func tellStory(){
+        print("This is a story you told me hehe - by ")
+        print(name!)
+    }
+}
+
+let hendrix = Developer(name: "Hendrix", jobTitle: "DataScientist", yearsExp: 1)
+
+hendrix.name
+hendrix.jobTitle
+hendrix.yearsExp
+
+hendrix.name = "Peralta" // you can change the values
+hendrix.name
+
+hendrix.tellStory()
