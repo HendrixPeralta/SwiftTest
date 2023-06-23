@@ -125,3 +125,34 @@ func getCurrentDayClean(on day : DaysClean) {
     print(day.rawValue)
 }
 getCurrentDayClean(on: .Friday)
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Switch
+
+
+enum DaysSwitch { // the cases can be all in just one line if you separete them by commas
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+    case Sunday
+}
+
+func getDaySwitch(on day : DaysSwitch) {
+    
+    switch day {
+    case .Monday :
+        print("Primer dia triste lo se")
+    case .Tuesday :
+        print("Un dia triste lo se")
+    case .Wednesday :
+        print("Cuando se acaba la semana?")
+    case .Thursday :
+        print("Cuarto dia triste lo se")
+    default:
+        print("Its almost Weekend") // if you use all the cases you dont need to add the default option
+    }
+}
+getDaySwitch(on: .Saturday)
