@@ -207,3 +207,44 @@ let agesOld = [35, 67, 87]
 
 let allAges = agesYoung + agesOld
 print(allAges)
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Optionals
+
+var ages2 = [21, 45, 18, 71, 23, 44, 17]
+ages2.sort()
+
+var agesNull: [Int] = []
+agesNull.sort()
+let oldestAgeNull = agesNull.last // optional can handle null in case the array is empty
+
+//  if let
+if let oldestAge = ages2.last {
+    print("The oldest age is \(oldestAge)")
+}else {
+    print("theres is no values in the array")
+}
+
+if let oldestAge = agesNull.last {
+    print("The oldest age is \(oldestAge)")
+}else {
+    print("theres is no values in the array")
+}
+
+// nill coalescing
+
+let oldestAge = ages2.last ?? 999 // if oldestAge has a value it does nothing but if its nill it gives it a value of 999
+
+// guard statement
+func getOldestAge(){
+    guard let oldestAge = ages2.last else{ // checks if oldestAge is null if so it returns
+        return
+    }
+    print("Return of the fuction is \(oldestAge)")
+    // here goes extra code that wont be run if the guard statement is false
+}
+getOldestAge()
+
+// force unwrap
+
+let oldestAgeForce = ages2.last! // the exclamation point at the end forces the program to use the value. It does not matter if its nill (this can lead to crashes)
