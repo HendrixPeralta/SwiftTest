@@ -64,26 +64,27 @@ if myHighScore > yourHighScore {
 // for loops
 
 let allStars = ["james", "Davis", "Harden", "Doncic", "Leonard"]
-
+/*
 for player in allStars {
     print(player)
 }
-
+*/
 for player in allStars where player == "Harden"{ // you can add a condition to the for loop
     print("your player is: ", player)
 }
 
 // for with ranges
+/*
 for i in 0..<25 { //this range does not include 25 to include 25 you can write 0...25
     print(i)
 }
-
+*/
 var randomInts: [Int] = []
 for _ in 0..<25 { // if you dont use i inside the scope is better to replace i with _
     let randomNumber = Int.random(in: 0...100)
     randomInts.append(randomNumber)
 }
-print(randomInts)
+//print(randomInts)
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // enum
@@ -109,7 +110,7 @@ func getCurrentDay(on day : Days) {
         print("Hora de buscar a alguien")
     }
 }
-getCurrentDay(on: .Saturday)
+//getCurrentDay(on: .Saturday)
 
 enum DaysClean: String { // now the enum has a String value
     case Monday = "Primer dia triste lo se"
@@ -124,12 +125,12 @@ enum DaysClean: String { // now the enum has a String value
 func getCurrentDayClean(on day : DaysClean) {
     print(day.rawValue)
 }
-getCurrentDayClean(on: .Friday)
+//getCurrentDayClean(on: .Friday)
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // Switch
 
-
+// Switch + enum
 enum DaysSwitch { // the cases can be all in just one line if you separete them by commas
     case Monday
     case Tuesday
@@ -155,4 +156,24 @@ func getDaySwitch(on day : DaysSwitch) {
         print("Its almost Weekend") // if you use all the cases you dont need to add the default option
     }
 }
-getDaySwitch(on: .Saturday)
+//getDaySwitch(on: .Saturday)
+
+// Switch NOT enum
+
+let matchMakingRank = 45
+
+func determinePlayerLeague(from rank: Int) {
+    switch rank {
+    case 0:
+        print("Play the game to determine your league")
+    case 1..<100:
+        print("You are in Bronze league")
+    case 100..<250:
+        print("You are in Silver league")
+    case 250..<500:
+        print("You are in Gold your league")
+    default:
+        print("You are too strong to measure your level")
+    }
+}
+determinePlayerLeague(from: matchMakingRank)
