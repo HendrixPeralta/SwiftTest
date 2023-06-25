@@ -267,6 +267,10 @@ class Developer {
         print("This is a story you told me hehe - by ")
         print(name!)
     }
+    
+    func speakName(){
+        print("The name is:", name!)
+    }
 }
 
 let hendrix = Developer(name: "Hendrix", jobTitle: "DataScientist", yearsExp: 1)
@@ -280,3 +284,35 @@ hendrix.name
 
 hendrix.tellStory()
 
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Inheritance
+
+class IOSDeveloper: Developer {
+    var favoriteFramework: String?
+    
+    func speakFavoriteFramework(){
+        if let favoriteFramework = favoriteFramework {
+            print("My favorite framework is:", favoriteFramework)
+            return
+        }else {
+            print("I dont  have a favorite framework")
+            return
+        }
+        
+    }
+    
+    override func speakName(){
+        print("\(name!) - \(jobTitle!)")
+    }
+}
+
+let ema = IOSDeveloper(name: "Ema", jobTitle: "IOS Developer", yearsExp: 5)
+
+ema.favoriteFramework = "ARkit"
+ema.speakFavoriteFramework()
+ema.speakName()
+hendrix.speakName()
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Struct
