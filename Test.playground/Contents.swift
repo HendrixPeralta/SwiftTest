@@ -282,7 +282,7 @@ hendrix.yearsExp
 hendrix.name = "Peralta" // you can change the values
 hendrix.name
 
-hendrix.tellStory()
+//hendrix.tellStory()
 
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -312,7 +312,53 @@ let ema = IOSDeveloper(name: "Ema", jobTitle: "IOS Developer", yearsExp: 5)
 ema.favoriteFramework = "ARkit"
 ema.speakFavoriteFramework()
 ema.speakName()
-hendrix.speakName()
+//hendrix.speakName()
 
 // """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 // Struct
+// Struct are value types -> does not reference the original data type
+// Classes are reference types -> reference the original data type
+
+// reference type
+var pedro = Developer(name: "Pedro", jobTitle: "Almost developer", yearsExp: 2)
+var juan = pedro
+
+juan.name // refenrece the first declaration of pedro
+
+juan.name = "Pepe"
+
+pedro.name // when we changed the name of juan also the name of pedro
+
+// Value type
+
+struct Developer_struct {
+    var name: String?
+    var jobTitle: String?
+    var yearsExp: Int? // is you add the interrogation sign it becomes optional (accepts nill values) it didnt work
+    
+    init(name: String, jobTitle: String, yearsExp: Int) {
+        self.name = name
+        self.jobTitle = jobTitle
+        self.yearsExp = yearsExp
+    }
+    
+    func tellStory(){
+        print("This is a story you told me hehe - by ")
+        print(name!)
+    }
+    
+    func speakName(){
+        print("The name is:", name!)
+    }
+}
+
+var mami = Developer_struct(name: "Rosa", jobTitle: "Data Science", yearsExp: 5)
+var papi = mami
+
+mami.name
+papi.name
+
+papi.name = "Hendrix"
+
+mami.name
+papi.name // the value of mami.name didnt change
