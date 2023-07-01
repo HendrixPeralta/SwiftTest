@@ -362,3 +362,17 @@ papi.name = "Hendrix"
 
 mami.name
 papi.name // the value of mami.name didnt change
+
+// """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+// Extension
+ 
+// Gives aditional functionality to an existing data type
+
+extension String{
+    func removeWhiteSpace() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
+}
+
+let alphabet = "A B C D E F G"
+alphabet.removeWhiteSpace()
